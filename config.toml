@@ -66,9 +66,14 @@ googleAnalytics = ""
 
     # postpended links
     [[menu.postpend]]
-      url = "http://a.ngel.es/"
-      name = "Creator"
+      url = "/docs/"
+      name = "Documentation"
       weight = 10
+
+    [[menu.postpend]]
+          url = "http://sms-automatic-sending.appspot.com/"
+          name = "Dashboard"
+          weight = 11
 
 
   # Hero section
