@@ -17,8 +17,8 @@ googleAnalytics = ""
 
   # To provide some metadata for search engines feel free to add a few
   # information about you and your website.
-  name = "Your name"
-  description = "Your description"
+  name = "Jose Angel Espinoza Portillo"
+  description = "A site to a sms gateway"
 
   # Link custom assets relative to /static
   custom_css = []
@@ -45,12 +45,12 @@ googleAnalytics = ""
 
   # Navigation
   [params.navigation]
-    brand = "The Agency"
+    brand = "SMS Gateway"
     # Optional logo as brand stored in img/
     #logo = "logo.svg"
-    services = "Services"
-    portfolio = "Portfolio"
-    about = "About"
+    services = "Plans"
+    portfolio = "Applications"
+    about = "Process"
     team = "Team"
     contact = "Contact"
 
@@ -66,8 +66,8 @@ googleAnalytics = ""
 
     # postpended links
     [[menu.postpend]]
-      url = "http://gohugo.io"
-      name = "External link"
+      url = "http://a.ngel.es/"
+      name = "Creator"
       weight = 10
 
 
@@ -75,35 +75,35 @@ googleAnalytics = ""
   [params.hero]
     # To change the background image of the hero, replace 'header-bg.jpg' in
     # the 'static/img' folder.
-    title = "Welcome To Our Studio!"
-    subtitle = "It's nice to meet you"
-    buttonText = "Tell me more"
+    title = "A Web service to"
+    subtitle = "Send SMS's from your Android"
+    buttonText = "Start Now"
 
 
   # Services section
   [params.services]
     enable = true
-    title = "Services"
-    subtitle = "Lorem ipsum dolor sit amet consectetur."
+    title = "Plans"
+    subtitle = "These are our plans."
 
     [[params.services.row]]
 
     [[params.services.row.list]]
-      icon = "fa-shopping-cart"
-      title = "E-Commerce"
-      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      icon = "fa-battery-1"
+      title = "Free"
+      description = "You can try our platform for free for up to 50 SMS's every day."
       url = "#"
 
     [[params.services.row.list]]
-      icon = "fa-laptop"
-      title = "Responsive Design"
-      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      icon = "fa-battery-full"
+      title = "Standard"
+      description = "For just a monthly 10 USD you can send all the sms's your device can handle. If you need to send more SMS's at a faster rate you can have a standard plan for many devices."
       url = "#"
 
     [[params.services.row.list]]
-      icon = "fa-lock"
-      title = "Web"
-      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      icon = "fa-plug"
+      title = "Enterprice"
+      description = "If you have a special requirement pleace let us know."
       url = "#"
 
   # Portfolio section
@@ -113,54 +113,54 @@ googleAnalytics = ""
     # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
     # at the root of this Hugo site.
     # For more informtion take a look at the README.
-    title = "Portfolio"
-    subtitle = "Lorem ipsum dolor sit amet consectetur."
+    title = "Applications"
+    subtitle = "Here some applications."
 
     [params.portfolio.modal]
       client = "Client"
       date = "Date"
       category = "Category"
-      buttonText = "Close project"
+      buttonText = "Close application"
 
 
     # About section
   [params.about]
     enable = true
-    title = "About"
-    subtitle = "Lorem ipsum dolor sit amet consectetur."
-    endpoint = "Be part<br>of our<br>story!"
+    title = "Process"
+    subtitle = "This is our process."
+    endpoint = "You are <br>Good To Go<br>"
 
     # The events will be listed from the top to the bottom.
     # All images are stored under 'static/img/about'.
     # Replace them with your own.
     [[params.about.events]]
-      img = "1.jpg"
-      date = "2009-2011"
-      title = "Our Humble Beginnings"
-      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+      img = "google.png"
+      date = "1)"
+      title = "Link with your gmail account"
+      description = "Enter to the dashboard and login with your Gmail account."
 
     [[params.about.events]]
-      img = "2.jpg"
-      date = "March 2011"
-      title = "An Agency is Born"
-      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+      img = "icon.png"
+      date = "2)"
+      title = "Download the Android App and link your device"
+      description = "In the Dashboard follow the instructions to <a href='https://play.google.com/store/apps/details?id=es.ngel.smssend'>DOWNLOAD</a> and link your android device and copy your API key."
 
     [[params.about.events]]
-      img = "3.jpg"
-      date = "December 2012"
-      title = "Our Humble Beginnings"
-      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+      img = "paypal.jpg"
+      date = "3) *Optional"
+      title = "Move to an Standard Plan"
+      description = "When the time is right for your solution move to a Standard Plan just enable the plan."
 
     [[params.about.events]]
-      img = "4.jpg"
-      date = "July 2014"
-      title = "Phase Two Expansion"
-      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+      img = "cloudapi.png"
+      date = "4)"
+      title = "Consume our API"
+      description = "Conect to the API with your API key and send SMS's from your device."
 
 
   # Team section
   [params.team]
-    enable = true
+    enable = false
     # Possibility to center items
     #center = true
     title = "Our amazing team"
@@ -212,7 +212,7 @@ She worked at Pied Piper for years until they went belly up."""
 
   # Client section
     [params.clients_list]
-      enable = true
+      enable = false
       # Possibility to center items
       #center = true
       # Optional client title specifying the involvement
@@ -241,7 +241,7 @@ She worked at Pied Piper for years until they went belly up."""
   [params.contact]
     enable = true
     title = "Contact us"
-    subtitle  = "Lorem ipsum dolor sit amet consectetur."
+    subtitle  = "For comments or enquiries."
     buttonText = "Send message"
 
     # Since this template is static, the contact form uses www.formspree.io as a
@@ -262,7 +262,7 @@ She worked at Pied Piper for years until they went belly up."""
     # add some custom JS script to finish the implementation.
     # postURL = "https://example.com/mailout/"
 
-    email = "your@email.com"
+    email = "jose@ngel.es"
 
     # Success and error message overwrite for async contact form
     #thanks = "Thank you for awesomely contacting us."
@@ -301,15 +301,11 @@ She worked at Pied Piper for years until they went belly up."""
 
     [[params.footer.social]]
       icon = "fa-twitter"
-      link = "#"
+      link = "http://twitter.com/onlyangel"
 
     [[params.footer.social]]
       icon = "fa-facebook"
-      link = "#"
-
-    [[params.footer.social]]
-      icon = "fa-linkedin"
-      link = "#"
+      link = "http://www.facebook.com/onlyangel"
 
     [[params.footer.quicklinks]]
       text = "Privacy Policy"
