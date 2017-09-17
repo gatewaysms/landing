@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="generator" content="Hugo 0.25.1" />
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>SMS Gateway Docs</title>
+    <link href='/docs/slate/stylesheets/monokai.css' rel="stylesheet" media="screen" />
+<link href='/docs/slate/stylesheets/screen.css' rel="stylesheet" media="screen" />
+<link href='/docs/slate/stylesheets/print.css' rel="stylesheet" media="print" />
+
+    
+<script src='/docs/slate/javascripts/all.js'></script>
+
+    
+</head>
+<body class="index" data-languages="[ &#34;shell&#34; ]">
+    <a href="#" id="nav-button">
+        <span>
+        NAV
+        <img src='/docs/slate/images/navbar.png'/>
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        
+         <img src='/docs/images/logo.png' />
+        
+        <div class="lang-selector">
+            
+            <a href="#" data-language-name="shell">Shell</a>
+            
+        </div>
+         
+        
+        <div class="search">
+            <input type="text" class="search" id="input-search" placeholder='Search'>
+        </div>
+        <ul class="search-results"></ul>
+        
+        <div id="toc">
+        </div>
+        
+        <div class="toc-footer">
+            <h3 class="translations-title">Translation</h3> 
+            
+<ul>
+    
+        <li><a href="https://gatewaysms.github.io/docs/nn/">Nynorsk</a></li>
+    
+</ul>
+
+
+        </div>
+         
+        
+        <ul class="toc-footer">
+            
+            <li><a href='http://sms-automatic-sending.appspot.com/'>Sign Up for a Developer Key</a></li>
+            
+        </ul>
+        
+        
+
+    </div>
+    <div class="page-wrapper">
+        <div class="dark-box"></div>
+        <div class="content">
+            
+    
+        
+
+<h1 id="sms-gateway-api">SMS Gateway API</h1>
+
+<p>Welcome to the SMS Gateway API! You can use our API to send SMS&rsquo;s from the device you have registered in your account.</p>
+
+<p>For now we have examples in Shell but we will have more information soon. You can view code examples in the dark area to the right, and you will be able to switch the programming language of the examples with the tabs in the top right.</p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<p>To access this API you need a API Key that you can get from the <a href="http://sms-automatic-sending.appspot.com/" target="_blank">Dashboard</a>.</p>
+
+<p>The process is the following:</p>
+
+<ol>
+<li>Go to the <a href="http://sms-automatic-sending.appspot.com/" target="_blank">Dashboard</a>.</li>
+<li>Access with your Gmail Account.</li>
+<li>Link your device.
+
+<ol>
+<li>Install the Android App from the <a href="https://play.google.com/store/apps/details?id=es.ngel.smssend" target="_blank">Play Store</a>.</li>
+<li>Agree and start the linking process in the <a href="http://sms-automatic-sending.appspot.com/" target="_blank">Dashboard</a>.</li>
+<li>Go to your <a href="http://gmail.com" target="_blank">email</a>.</li>
+<li>Copy the code from your email.</li>
+<li>Paste the code in the app.</li>
+</ol></li>
+<li>Connect your App: Your app have to be OPEN to send the sms&rsquo;s.
+
+<ol>
+<li>Open the App.</li>
+<li>Click in the &ldquo;Link&rdquo; button to start sending messages.</li>
+</ol></li>
+<li>Once all the previous steps are finished you can gatther the API Key from the <a href="http://sms-automatic-sending.appspot.com/" target="_blank">Dashboard</a>.</li>
+<li>Consume this API.</li>
+<li>Send all your SMS&rsquo;s!!!.º</li>
+</ol>
+
+<aside class="notice">
+You must replace <code>APIKEY</code> with your personal API key.
+</aside>
+
+<h1 id="send">Send</h1>
+
+<h2 id="send-an-sms-s">Send an SMS&rsquo;s</h2>
+<div class="highlight"><pre><code class="language-shell" data-lang="shell"><span></span>curl <span class="se">\</span>
+    -X POST <span class="s2">&quot;http://sms-automatic-sending.appspot.com/api/send?apikey=APIKEY&quot;</span> <span class="se">\</span>
+    -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+    -d <span class="s1">&#39;</span>
+<span class="s1">    {</span>
+<span class="s1">    	&quot;Number&quot;:&quot;5555555555&quot;,</span>
+<span class="s1">    	&quot;Text&quot;:&quot;Your message&quot;</span>
+<span class="s1">    }</span>
+<span class="s1">    &#39;</span>
+</code></pre></div>
+
+<blockquote>
+<p>The above command returns the following:</p>
+
+<p>Published a message; msg ID: 154147390491302</p>
+</blockquote>
+
+<p>This end poing enqueue a message.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code>POST http://sms-automatic-sending.appspot.com/api/send</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>apikey</td>
+<td>Your API Key from the Dashboard</td>
+</tr>
+</tbody>
+</table>
+
+<aside class="success">
+Remember — You must replace APIKEY with your personal API key.
+</aside>
+
+    
+        
+
+<h1 id="errors">Errors</h1>
+
+<aside class="notice">If the Web Service response starts with ERROR, some thing happend in the web service.</aside>
+
+<p>The API errors are the folloing:</p>
+
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>001</td>
+<td>Missing parameters &ndash; There is not enought parameters sendend to the Web Service</td>
+</tr>
+
+<tr>
+<td>002</td>
+<td>Problem accessing the ApiKey</td>
+</tr>
+
+<tr>
+<td>003</td>
+<td>API key doesn&rsquo;t exist</td>
+</tr>
+
+<tr>
+<td>004</td>
+<td>Problem accessing the user</td>
+</tr>
+
+<tr>
+<td>005</td>
+<td>Problem Gathering previous messages</td>
+</tr>
+
+<tr>
+<td>006</td>
+<td>Ever Quota &ndash; You have exceeded your maximum amount of SMS&rsquo;s allowed for this user</td>
+</tr>
+
+<tr>
+<td>007</td>
+<td>Problem with the attached json body of the request</td>
+</tr>
+
+<tr>
+<td>008</td>
+<td>Conecting to the Channel</td>
+</tr>
+
+<tr>
+<td>009</td>
+<td>Problem with the attached json body of the request</td>
+</tr>
+
+<tr>
+<td>010</td>
+<td>Conecting to the Channel</td>
+</tr>
+</tbody>
+</table>
+
+    
+
+        </div>
+        <div class="dark-box">
+            
+            <div class="lang-selector">
+                
+                <a href="#" data-language-name="shell">Shell</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
