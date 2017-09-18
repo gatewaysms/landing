@@ -107,7 +107,7 @@ googleAnalytics = ""
 
     [[params.services.row.list]]
       icon = "fa-plug"
-      title = "Enterprice"
+      title = "Enterprise"
       description = "If you have a special requirement pleace let us know."
       url = "#"
 
