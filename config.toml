@@ -1,7 +1,7 @@
 # Site settings
 baseurl = "https://gatewaysms.github.io/"
 languageCode = "en-us"
-title = "Agency"
+title = "SMS Gateway"
 theme = "hugo-agency-theme"
 
 # Enter your tracking code to enable Google Analytics
